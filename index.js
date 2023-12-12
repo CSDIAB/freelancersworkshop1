@@ -85,7 +85,7 @@ const randFreelancer = {
 };
 freelancers.push(randFreelancer);
 console.log(randFreelancer);
-ul.innerHTML += `<li onclick=\"\">${name} is a ${occupation} and their price is ${indexPrices}
+ul.innerHTML += `<li onclick=\"removehtml(this)\">${name} is a ${occupation} and their price is ${indexPrices}
 </li>`;
 calcSum()
   console.log(sum);
@@ -94,6 +94,6 @@ calcSum()
   document.getElementById("averageSpan").innerHTML = avg;
 }
 
-function removehtml (){
-  ul.intterhtml += `<li></li>`
+function removehtml (listitem){
+  listitem.parentNode.removeChild(listitem);
 }
